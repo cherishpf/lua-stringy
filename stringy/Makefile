@@ -1,8 +1,10 @@
-LUA ?= lua5.1
-LUA_PC ?= lua5.1
+LUA ?= lua
+LUA_PC ?= lua
 LUA_CFLAGS = $(shell pkg-config $(LUA_PC) --cflags)
 
 CFLAGS ?= -O3 -Wall -Werror
+
+INC = -I /usr/local/include/
 
 all: stringy.so
 
